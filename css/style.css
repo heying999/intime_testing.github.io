@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Lato');
+
+
+body {
+  margin: 0;
+  font-family: Courier, Helvetica, sans-serif;
+  background: #000000;
+}
+
+/*#top-image {
+background:url('https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/0/8/8905/red-rocks-park-o.jpg') -25px -50px;
+position:fixed ;
+top:0;
+width:100%;
+z-index:0;
+  height:100%;
+  background-size: calc(100% + 50px);
+}*/
+
+  p.ying {
+  position:relative;
+  /*left:-49.8%;*/
+  left:-50%;
+  text-align: right;
+  font-family: 'Inconsolata', monospace;
+  padding:1px;
+  color: #9900FF;
+  -webkit-transition: width 0.5s;
+  -webkit-animation: loading 3.9s ease-out infinite;
+
+}
+p.date {
+
+text-align: center;
+font-family: 'Aril';
+color: #000000;
+}
+
+ p.su {
+   position:relative;
+   left:50%;
+   text-align:left;
+  font-family: 'Inconsolata', monospace;
+  color: 	#0066ff;
+  -webkit-transition: width 0.5s;
+  -webkit-animation: loading 1s ease-out infinite;
+}
+@-webkit-keyframes loading{
+0%{
+  opacity: 0.3;
+}
+
+50% {
+opacity: 1;
+}
+
+100%{
+  opacity: 0.3;
+}
+}
