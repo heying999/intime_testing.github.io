@@ -15,7 +15,8 @@ var pageView = {};
     document.write('</div>');
     document.write('<div class="container">');
   if(creator == "Ying He"){
-     document.write('<p class="ying">');
+     var classNameForEach = 'ying-' + index;
+     document.write("<p class='ying' id=" + classNameForEach + ">");
      document.write(eventName + '  --' + eventStartTime + '  ' + eventDate);
      document.write('</p>');
 
@@ -26,29 +27,23 @@ var pageView = {};
      document.write(eventDate + '  ' +  eventStartTime + '  --' +  eventName);
      document.write('</p>');
 
-
    }
 
-
- //  if(creator == "Ying He"){
- //  document.write(creator + "." + eventDate + "." + eventStartTime + "." + eventName);
- // document.write('</p>');
-    // for(var i = 0; i < datum.length; i++){
-    //   if(datum[i].creator){
-    //     var creator = datum['creator']['displayname'];
-    //     console.log(creator);
-    //   }
-
-    //}
     document.write('</div>');
 //
-    console.log(creator);
+
   });
 
 _.each(pageViewData417, function(data, index) {
-  var className = '#su-' + index;
-  var color = 'rgb(' + index * 5 + ', 0, 0)';
+  var ranNumber = (_.random(0, 9));
+  var ranNumber2 = (_.random(0, 13));
+  var classNameSu = '#su-' + index;
+  var classNameYing = '#ying-' + index;
+  //var color = 'rgb(' + index * 5 + ', 0, 0)';
   // $(className).css('color', color);
-  var animation = 'loading ' + index/10 + 's ease-out infinite';
-  $(className).css('-webkit-animation', animation);
-})
+  var animationSu = 'loading ' + ranNumber + 's ease-out infinite';
+  var animationYing = 'loading ' + ranNumber2 + 's ease-out infinite';
+  $(classNameSu).css('-webkit-animation', animationSu);
+  $(classNameYing).css('-webkit-animation', animationYing);
+  console.log(ranNumber);
+});
